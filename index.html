@@ -3,69 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Saowanlak Nasa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Resume | Saowanlak Nasa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --main-blue: #0047AB; --dark-blue: #003380; }
-        body { font-family: 'Sarabun', sans-serif; margin: 0; display: flex; background: #f0f0f0; color: #333; }
-        .sidebar { width: 35%; background: var(--main-blue); color: white; padding: 40px 20px; text-align: center; }
-        .main-content { width: 65%; background: white; padding: 40px; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid white; object-fit: cover; }
-        h1, h2 { color: white; margin-bottom: 10px; }
-        .section-title { background: #333; color: white; padding: 5px 15px; display: inline-block; border-radius: 5px; margin-top: 25px; }
-        .contact-info { text-align: left; font-size: 0.9em; margin-top: 15px; line-height: 1.6; }
-        .content-header { background: var(--main-blue); color: white; padding: 20px; margin: -40px -40px 30px -40px; }
-        .blue-title { color: var(--main-blue); border-bottom: 2px solid var(--main-blue); display: inline-block; padding-bottom: 5px; }
-        ul { padding-left: 20px; line-height: 1.8; }
+        :root {
+            --primary-color: #0047AB;
+            --secondary-color: #002d6b;
+            --bg-light: #f4f7f6;
+            --text-dark: #2d3436;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--text-dark);
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--white);
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Sidebar ดีไซน์ใหม่ */
+        .sidebar {
+            flex: 1;
+            min-width: 320px;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .side-section { margin-bottom: 35px; }
+        .side-title {
+            font-size: 1.2rem;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .side-title i { margin-right: 10px; }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 12px;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+        .info-item i { width: 25px; margin-right: 10px; opacity: 0.8; }
+
+        /* Main Content ดีไซน์ใหม่ */
+        .main-content {
+            flex: 2;
+            min-width: 400px;
+            padding: 50px;
+        }
+
+        .header-name {
+            border-left: 8px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+        .header-name h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+        }
+        .header-name p {
+            margin: 5px 0 0;
+            font-size: 1.5rem;
+            color: #636e72;
+        }
+
+        .main-section { margin-bottom: 40px; }
+        .main-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .main-title i { margin-right: 10px; background: var(--primary-color); color: white; padding: 8px; border-radius: 5px; font-size: 1rem; }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+
+        .experience-list { list-style: none; padding: 0; }
+        .experience-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+        }
+        .experience-list li::before {
+            content: "\f058"; /* check-circle icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .resume-container { flex-direction: column; margin: 0; border-radius: 0; }
+            .main-content { padding: 30px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
-        <img src="resume.png" alt="Profile" class="profile-img"> <h2 class="section-title">ประวัติส่วนตัว</h2>
-        <div class="contact-info">
-            <p>อายุ: 22 ปี<br>สัญชาติ: ไทย<br>ศาสนา: คริสต์</p>
+    <div class="resume-container">
+        <div class="sidebar">
+            <div class="profile-box">
+                <img src="resume.png" alt="Saowanlak" class="profile-img">
+            </div>
+
+            <div class="side-section">
+                <div class="side-title"><i class="fas fa-user"></i> ประวัติส่วนตัว</div>
+                <div class="info-item">อายุ: 22 ปี</div>
+                <div class="info-item">สัญชาติ: ไทย</div>
+                <div class="info-item">ศาสนา: คริสต์</div>
+            </div>
+
+            <div class="side-section">
+                <div class="side-title"><i class="fas fa-address-book"></i> การติดต่อ</div>
+                <div class="info-item"><i class="fas fa-phone"></i> 092-5299432</div>
+                <div class="info-item"><i class="fas fa-envelope"></i> nasasaowanlak@gmail.com</div>
+                <div class="info-item"><i class="fab fa-line"></i> 0902194837</div>
+                <div class="info-item"><i class="fas fa-map-marker-alt"></i> 21/5 14bar(ร้านสีเขียว) จ.อุตรดิตถ์</div>
+            </div>
+
+            <div class="side-section">
+                <div class="side-title"><i class="fas fa-graduation-cap"></i> การศึกษา</div>
+                <div class="info-item">
+                    ปริญญาตรี : สาขาวิทยาศาสตร์ (เอกฟิสิกส์) ชั้นปีที่ 4 มหาวิทยาลัยราชภัฏอุตรดิตถ์ (มรอ.)
+                </div>
+            </div>
         </div>
 
-        <h2 class="section-title">การติดต่อ</h2>
-        <div class="contact-info">
-            <p>📞 092-5299432</p>
-            <p>📍 21/5 14bar(ร้านสีเขียว) จ.อุตรดิตถ์</p>
-            <p>📧 nasasaowanlak@gmail.com</p>
-            <p>🆔 0902194837</p>
+        <div class="main-content">
+            <div class="header-name">
+                <h1>MS. SAOWANLAK NASA</h1>
+                <p>นางสาวเสาวลักษณ์ นาสา</p>
+            </div>
+
+            <div class="main-section">
+                <div class="main-title"><i class="fas fa-bullseye"></i> จุดมุ่งหมายในการทำงาน</div>
+                <div class="card">
+                    ต้องการสมัครงานในตำแหน่ง <strong>ครูวิทยาศาสตร์</strong> เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างมีประสิทธิภาพสูงสุด และเกิดประโยชน์ต่อตัวนักเรียน
+                </div>
+            </div>
+
+            <div class="main-section">
+                <div class="main-title"><i class="fas fa-briefcase"></i> ประสบการณ์สอน</div>
+                <ul class="experience-list">
+                    <li>ครูสอนวิชาฟิสิกส์ ม.4-5 ที่ BKO</li>
+                    <li>ครูสอนวิชาวิทยาศาสตร์ (เพิ่มเติม) ม.3 ที่ BKO</li>
+                    <li>ติววิชาวิทยาศาสตร์ทั่วไป ป.6 ที่ BKO และ UEC</li>
+                    <li>ครูสอนวิชาเคมี ม. 4 ที่ UEC</li>
+                    <li>สอน English ประถมต้น ที่ UEC</li>
+                    <li>รับสอนออนไลน์วิชากลศาสตร์ (ฟิสิกส์วิศวกรรม)</li>
+                </ul>
+            </div>
+
+            <div class="main-section">
+                <div class="main-title"><i class="fas fa-star"></i> ทักษะและความสามารถ</div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">การสอนและถ่ายทอด</span>
+                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Microsoft Excel</span>
+                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Microsoft Word</span>
+                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">ฟิสิกส์และวิทยาศาสตร์</span>
+                </div>
+            </div>
         </div>
-
-        <h2 class="section-title">การศึกษา</h2>
-        <div class="contact-info">
-            <p><strong>ปริญญาตรี :</strong> สาขาวิทยาศาสตร์ (เอกฟิสิกส์) ชั้นปีที่ 4 มหาวิทยาลัยราชภัฏอุตรดิตถ์ (มรอ.)</p>
-        </div>
-    </div>
-
-    <div class="main-content">
-        <div class="content-header">
-            <h1>MS. SAOWANLAK NASA</h1>
-            <p style="font-size: 1.5em;">นางสาวเสาวลักษณ์ นาสา</p>
-        </div>
-
-        <h3 class="blue-title">จุดมุ่งหมายในการทำงาน</h3>
-        <p>ต้องการสมัครงานในตำแหน่ง ครูวิทยาศาสตร์ เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างมีประสิทธิภาพ</p>
-
-        <h3 class="blue-title">ประสบการณ์การทำงาน</h3>
-        <ul>
-            <li>ครูสอนวิชาฟิสิกส์ ม.4-5 ที่ BKO</li>
-            <li>ครูสอนวิชาวิทยาศาสตร์ (เพิ่มเติม) ม.3 ที่ BKO</li>
-            <li>ติววิชาวิทยาศาสตร์ทั่วไป ป.6 ที่ BKO และ UEC</li>
-            <li>ครูสอนวิชาเคมี ม. 4 ที่ UEC</li>
-            <li>สอน English ประถมต้น ที่ UEC</li>
-            <li>รับสอนออนไลน์วิชากลศาสตร์ (วิศวะ)</li>
-        </ul>
-
-        <h3 class="blue-title">ทักษะและความสามารถ</h3>
-        <ul>
-            <li>สอนพิเศษ</li>
-            <li>การใช้โปรแกรม Microsoft Excel</li>
-            <li>การใช้โปรแกรม Microsoft Word</li>
-        </ul>
     </div>
 
 </body>
