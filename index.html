@@ -9,54 +9,43 @@
     
     <style>
         :root {
-            --primary: #0047AB; /* สีน้ำเงินสถาบัน */
-            --secondary: #002d6b;
-            --accent: #f1c40f; /* สีทองประดับ */
-            --bg: #f4f7f6;
-            --white: #ffffff;
-            --text: #2d3436;
+            --primary: #0047AB; --secondary: #002d6b; --accent: #f1c40f;
+            --bg: #f4f7f6; --white: #ffffff; --text: #2d3436;
         }
 
-        body {
-            font-family: 'Sarabun', sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-
+        body { font-family: 'Sarabun', sans-serif; background-color: var(--bg); margin: 0; display: flex; justify-content: center; padding: 40px 20px; }
+        
         .resume-container {
-            width: 100%;
-            max-width: 1000px;
-            background: var(--white);
-            display: flex;
-            flex-wrap: wrap;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            border-radius: 20px;
-            overflow: hidden;
+            width: 100%; max-width: 1000px; background: var(--white); display: flex; flex-wrap: wrap;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15); border-radius: 20px; overflow: hidden;
         }
 
         /* --- SIDEBAR --- */
         .sidebar {
-            flex: 1;
-            min-width: 320px;
-            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 50px 30px;
-            text-align: center;
+            flex: 1; min-width: 320px; background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white; padding: 50px 30px; text-align: center; display: flex; flex-direction: column; align-items: center;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 8px solid rgba(255,255,255,0.2);
-            object-fit: cover;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            width: 180px; height: 180px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2);
+            object-fit: cover; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
+        .profile-img:hover { transform: scale(1.05); }
 
         .side-title {
-            font-size: 1.2rem;
-            font-weight:
+            font-size: 1.1rem; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px; margin: 25px 0 15px; width: 100%; color: var(--accent);
+        }
+
+        .info-item { display: flex; align-items: center; margin-bottom: 12px; width: 100%; font-size: 0.9rem; }
+        .info-item i { width: 30px; color: var(--accent); font-size: 1.1rem; }
+
+        /* --- SOCIAL ICONS & HOVER EFFECT --- */
+        .social-wrapper { margin-top: 20px; width: 100%; }
+        .social-icons { display: flex; justify-content: center; gap: 15px; }
+        .social-icons a {
+            color: white; background: rgba(255,255,255,0.15); width: 45px; height: 45px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 1.3rem; border: 1px solid rgba(255,255,255
