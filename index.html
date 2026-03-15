@@ -6,58 +6,57 @@
     <title>Resume | Saowanlak Nasa</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #0047AB; --secondary: #002d6b; --accent: #f1c40f; --bg: #f4f7f6; --text: #2d3436; }
-        body { font-family: 'Sarabun', sans-serif; background-color: var(--bg); margin: 0; display: flex; justify-content: center; min-height: 100vh; color: var(--text); padding: 20px; }
-        .resume-container { width: 100%; max-width: 1000px; background: #fff; display: flex; flex-wrap: wrap; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-radius: 15px; overflow: hidden; }
-        .sidebar { flex: 1; min-width: 320px; background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 50px 30px; display: flex; flex-direction: column; align-items: center; }
-        .profile-img { width: 200px; height: 200px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .side-section { width: 100%; margin-bottom: 30px; }
-        .side-title { font-size: 1.2rem; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 15px; display: flex; align-items: center; color: var(--accent); }
-        .side-title i { margin-right: 10px; }
-        .info-item { display: flex; margin-bottom: 12px; font-size: 0.95rem; line-height: 1.4; }
-        .info-item i { width: 25px; margin-right: 10px; text-align: center; color: var(--accent); }
-        .main-content { flex: 2; min-width: 400px; padding: 50px; }
-        .header-name { border-left: 8px solid var(--primary); padding-left: 20px; margin-bottom: 40px; }
-        .header-name h1 { margin: 0; font-size: 2.5rem; color: var(--secondary); }
-        .header-name p { margin: 5px 0 0; font-size: 1.5rem; color: #636e72; }
-        .main-section { margin-bottom: 35px; }
-        .main-title { color: var(--secondary); font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; }
-        .main-title i { margin-right: 12px; background: var(--primary); color: white; padding: 8px; border-radius: 6px; font-size: 1rem; }
-        .card { background: #fff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .exp-list { list-style: none; padding: 0; }
-        .exp-list li { position: relative; padding-left: 30px; margin-bottom: 10px; }
-        .exp-list li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--primary); }
-        .skill-badge { display: inline-block; background: #e1f0ff; color: var(--primary); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin: 0 5px 10px 0; }
-        @media (max-width: 768px) { .resume-container { flex-direction: column; } .main-content { padding: 30px; } }
-    </style>
-</head>
-<body>
-    <div class="resume-container">
-        <div class="sidebar">
-            <img src="รูปบัณฑิต.jpg" alt="Saowanlak" class="profile-img">
-            <div class="side-section">
-                <div class="side-title"><i class="fas fa-user"></i> ประวัติส่วนตัว</div>
-                <div class="info-item">อายุ: 22 ปี | สัญชาติ: ไทย</div>
-                <div class="info-item">ศาสนา: คริสต์</div>
-            </div>
-            <div class="side-section">
-                <div class="side-title"><i class="fas fa-phone"></i> การติดต่อ</div>
-                <div class="info-item"><i class="fas fa-mobile-alt"></i> 092-5299432</div>
-                <div class="info-item"><i class="fas fa-envelope"></i> nasasaowanlak@gmail.com</div>
-                <div class="info-item"><i class="fab fa-line"></i> 0902194837</div>
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i> จ.อุตรดิตถ์</div>
-            </div>
-            <div class="side-section">
-                <div class="side-title"><i class="fas fa-graduation-cap"></i> การศึกษา</div>
-                <div class="info-item">ป.ตรี เอกฟิสิกส์ ชั้นปีที่ 4 มหาวิทยาลัยราชภัฏอุตรดิตถ์</div>
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="header-name">
-                <h1>MS. SAOWANLAK NASA</h1>
-                <p>นางสาวเสาวลักษณ์ นาสา</p>
-            </div>
-            <div class="main-section">
-                <div class="main-title"><i class="fas fa-bullseye"></i> จุดมุ่งหมาย</div>
-                <div class="card">
+        :root {
+            --primary: #0047AB; /* สีน้ำเงินสถาบัน */
+            --secondary: #002d6b;
+            --accent: #f1c40f; /* สีทองประดับ */
+            --bg: #f4f7f6;
+            --white: #ffffff;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--white);
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar {
+            flex: 1;
+            min-width: 320px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .side-title {
+            font-size: 1.2rem;
+            font-weight:
