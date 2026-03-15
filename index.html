@@ -6,211 +6,58 @@
     <title>Resume | Saowanlak Nasa</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        :root {
-            --primary-color: #0047AB;
-            --secondary-color: #002d6b;
-            --bg-light: #f4f7f6;
-            --text-dark: #2d3436;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Sarabun', sans-serif;
-            background-color: var(--bg-light);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-            color: var(--text-dark);
-        }
-
-        .resume-container {
-            width: 100%;
-            max-width: 1000px;
-            background: var(--white);
-            display: flex;
-            flex-wrap: wrap;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 20px;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        /* Sidebar ดีไซน์ใหม่ */
-        .sidebar {
-            flex: 1;
-            min-width: 320px;
-            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 40px 30px;
-        }
-
-        .profile-box {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 6px solid rgba(255,255,255,0.2);
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .side-section { margin-bottom: 35px; }
-        .side-title {
-            font-size: 1.2rem;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
+        :root { --primary: #0047AB; --secondary: #002d6b; --accent: #f1c40f; --bg: #f4f7f6; --text: #2d3436; }
+        body { font-family: 'Sarabun', sans-serif; background-color: var(--bg); margin: 0; display: flex; justify-content: center; min-height: 100vh; color: var(--text); padding: 20px; }
+        .resume-container { width: 100%; max-width: 1000px; background: #fff; display: flex; flex-wrap: wrap; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-radius: 15px; overflow: hidden; }
+        .sidebar { flex: 1; min-width: 320px; background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 50px 30px; display: flex; flex-direction: column; align-items: center; }
+        .profile-img { width: 200px; height: 200px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2); object-fit: cover; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .side-section { width: 100%; margin-bottom: 30px; }
+        .side-title { font-size: 1.2rem; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 15px; display: flex; align-items: center; color: var(--accent); }
         .side-title i { margin-right: 10px; }
-
-        .info-item {
-            display: flex;
-            margin-bottom: 12px;
-            font-weight: 300;
-            font-size: 0.95rem;
-        }
-        .info-item i { width: 25px; margin-right: 10px; opacity: 0.8; }
-
-        /* Main Content ดีไซน์ใหม่ */
-        .main-content {
-            flex: 2;
-            min-width: 400px;
-            padding: 50px;
-        }
-
-        .header-name {
-            border-left: 8px solid var(--primary-color);
-            padding-left: 20px;
-            margin-bottom: 40px;
-        }
-        .header-name h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            letter-spacing: 1px;
-        }
-        .header-name p {
-            margin: 5px 0 0;
-            font-size: 1.5rem;
-            color: #636e72;
-        }
-
-        .main-section { margin-bottom: 40px; }
-        .main-title {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .main-title i { margin-right: 10px; background: var(--primary-color); color: white; padding: 8px; border-radius: 5px; font-size: 1rem; }
-
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 15px;
-        }
-
-        .experience-list { list-style: none; padding: 0; }
-        .experience-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-        }
-        .experience-list li::before {
-            content: "\f058"; /* check-circle icon */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 768px) {
-            .resume-container { flex-direction: column; margin: 0; border-radius: 0; }
-            .main-content { padding: 30px; }
-        }
+        .info-item { display: flex; margin-bottom: 12px; font-size: 0.95rem; line-height: 1.4; }
+        .info-item i { width: 25px; margin-right: 10px; text-align: center; color: var(--accent); }
+        .main-content { flex: 2; min-width: 400px; padding: 50px; }
+        .header-name { border-left: 8px solid var(--primary); padding-left: 20px; margin-bottom: 40px; }
+        .header-name h1 { margin: 0; font-size: 2.5rem; color: var(--secondary); }
+        .header-name p { margin: 5px 0 0; font-size: 1.5rem; color: #636e72; }
+        .main-section { margin-bottom: 35px; }
+        .main-title { color: var(--secondary); font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; }
+        .main-title i { margin-right: 12px; background: var(--primary); color: white; padding: 8px; border-radius: 6px; font-size: 1rem; }
+        .card { background: #fff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .exp-list { list-style: none; padding: 0; }
+        .exp-list li { position: relative; padding-left: 30px; margin-bottom: 10px; }
+        .exp-list li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--primary); }
+        .skill-badge { display: inline-block; background: #e1f0ff; color: var(--primary); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin: 0 5px 10px 0; }
+        @media (max-width: 768px) { .resume-container { flex-direction: column; } .main-content { padding: 30px; } }
     </style>
 </head>
 <body>
-
     <div class="resume-container">
         <div class="sidebar">
-            <div class="profile-box">
-                <img src="resume.png" alt="Saowanlak" class="profile-img">
-            </div>
-
+            <img src="รูปบัณฑิต.jpg" alt="Saowanlak" class="profile-img">
             <div class="side-section">
                 <div class="side-title"><i class="fas fa-user"></i> ประวัติส่วนตัว</div>
-                <div class="info-item">อายุ: 22 ปี</div>
-                <div class="info-item">สัญชาติ: ไทย</div>
+                <div class="info-item">อายุ: 22 ปี | สัญชาติ: ไทย</div>
                 <div class="info-item">ศาสนา: คริสต์</div>
             </div>
-
             <div class="side-section">
-                <div class="side-title"><i class="fas fa-address-book"></i> การติดต่อ</div>
-                <div class="info-item"><i class="fas fa-phone"></i> 092-5299432</div>
+                <div class="side-title"><i class="fas fa-phone"></i> การติดต่อ</div>
+                <div class="info-item"><i class="fas fa-mobile-alt"></i> 092-5299432</div>
                 <div class="info-item"><i class="fas fa-envelope"></i> nasasaowanlak@gmail.com</div>
                 <div class="info-item"><i class="fab fa-line"></i> 0902194837</div>
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i> 21/5 14bar(ร้านสีเขียว) จ.อุตรดิตถ์</div>
+                <div class="info-item"><i class="fas fa-map-marker-alt"></i> จ.อุตรดิตถ์</div>
             </div>
-
             <div class="side-section">
                 <div class="side-title"><i class="fas fa-graduation-cap"></i> การศึกษา</div>
-                <div class="info-item">
-                    ปริญญาตรี : สาขาวิทยาศาสตร์ (เอกฟิสิกส์) ชั้นปีที่ 4 มหาวิทยาลัยราชภัฏอุตรดิตถ์ (มรอ.)
-                </div>
+                <div class="info-item">ป.ตรี เอกฟิสิกส์ ชั้นปีที่ 4 มหาวิทยาลัยราชภัฏอุตรดิตถ์</div>
             </div>
         </div>
-
         <div class="main-content">
             <div class="header-name">
                 <h1>MS. SAOWANLAK NASA</h1>
                 <p>นางสาวเสาวลักษณ์ นาสา</p>
             </div>
-
             <div class="main-section">
-                <div class="main-title"><i class="fas fa-bullseye"></i> จุดมุ่งหมายในการทำงาน</div>
+                <div class="main-title"><i class="fas fa-bullseye"></i> จุดมุ่งหมาย</div>
                 <div class="card">
-                    ต้องการสมัครงานในตำแหน่ง <strong>ครูวิทยาศาสตร์</strong> เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างมีประสิทธิภาพสูงสุด และเกิดประโยชน์ต่อตัวนักเรียน
-                </div>
-            </div>
-
-            <div class="main-section">
-                <div class="main-title"><i class="fas fa-briefcase"></i> ประสบการณ์สอน</div>
-                <ul class="experience-list">
-                    <li>ครูสอนวิชาฟิสิกส์ ม.4-5 ที่ BKO</li>
-                    <li>ครูสอนวิชาวิทยาศาสตร์ (เพิ่มเติม) ม.3 ที่ BKO</li>
-                    <li>ติววิชาวิทยาศาสตร์ทั่วไป ป.6 ที่ BKO และ UEC</li>
-                    <li>ครูสอนวิชาเคมี ม. 4 ที่ UEC</li>
-                    <li>สอน English ประถมต้น ที่ UEC</li>
-                    <li>รับสอนออนไลน์วิชากลศาสตร์ (ฟิสิกส์วิศวกรรม)</li>
-                </ul>
-            </div>
-
-            <div class="main-section">
-                <div class="main-title"><i class="fas fa-star"></i> ทักษะและความสามารถ</div>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">การสอนและถ่ายทอด</span>
-                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Microsoft Excel</span>
-                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Microsoft Word</span>
-                    <span style="background: #e1f0ff; color: #0047AB; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">ฟิสิกส์และวิทยาศาสตร์</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
