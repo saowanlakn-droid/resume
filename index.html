@@ -290,24 +290,43 @@
                 </div>
             </div>
 
-            <!-- Experiment Box -->
-            <div class="research-showcase" style="margin-top: 4rem;">
-                <div class="research-text fade-in-left">
-                    <h3>ปฏิบัติการทดลอง</h3>
-                    <h4>เรื่อง การหาค่าความร้อนของถุงพลาสติก</h4>
-                    <p class="abstract">
-                        สื่อการเรียนการสอนและการทดลองเชิงปฏิบัติการ เรื่อง การหาค่าความร้อนของถุงพลาสติก เพื่อศึกษาทฤษฎีทางความร้อน ส่งเสริมการเรียนรู้ผ่านการลงมือปฏิบัติจริง และสามารถนำความรู้ฟิสิกส์ไปประยุกต์ใช้กับสิ่งแวดล้อมได้
-                    </p>
-                    <ul class="key-points">
-                        <li><i class="fas fa-check-circle"></i> เน้นกระบวนการ Active Learning และการทดลอง</li>
-                        <li><i class="fas fa-check-circle"></i> ฝึกทักษะการคิดวิเคราะห์ และการบันทึกผลทางวิทยาศาสตร์</li>
-                    </ul>
-                    <a href="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" target="_blank" class="btn btn-outline" style="margin-top: 20px;">
-                        <i class="fas fa-file-pdf"></i> เปิดเอกสารประกอบการทดลอง
-                    </a>
+            <!-- Modern Lab Spotlight -->
+            <div class="research-showcase fade-in-up" style="margin-top: 5rem; grid-template-columns: 1fr; background: rgba(30, 64, 175, 0.03); padding: 50px; border-radius: 40px; border: 1px dashed rgba(37,99,235,0.3); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -10px; right: 20px; font-size: 8rem; color: rgba(37, 99, 235, 0.05); font-weight: 900; pointer-events: none;">LAB</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center;">
+                    <div class="lab-visual" style="border-radius: 35px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.18); border: 2px solid white; transition: all 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="lab_hero.png" alt="Lab Experiment" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div class="lab-content" style="text-align: left; position: relative; z-index: 2;">
+                        <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2.5px; font-size: 0.85rem; display: block; margin-bottom: 10px;">Scientific Investigation</span>
+                        <h3 style="font-size: 2.6rem; color: var(--primary-dark); font-weight: 800; line-height: 1.2; margin-bottom: 20px;">ปฏิบัติการทดลอง:<br>การหาค่าความร้อนของถุงพลาสติก</h3>
+                        <p style="font-size: 1.15rem; color: var(--text-light); line-height: 1.8; margin-bottom: 30px; max-width: 90%;">ศึกษาคุณสมบัติ "ความจุความร้อน" ของพอลิเมอร์ผ่านการทดลองเชิงประยุกต์ เพื่อบูรณาการทฤษฎีความร้อนในวิชาฟิสิกส์เข้ากับการแก้ปัญหาสิ่งแวดล้อม และฝึกทักษะการวัดผลทางวิทยาศาสตร์แบบมืออาชีพ</p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 35px;">
+                            <div style="background: white; padding: 12px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem;">
+                                <i class="fas fa-burn" style="color: #f59e0b;"></i> Thermodynamics
+                            </div>
+                            <div style="background: white; padding: 12px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem;">
+                                <i class="fas fa-chart-line" style="color: var(--accent);"></i> Data Analysis
+                            </div>
+                            <div style="background: white; padding: 12px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem;">
+                                <i class="fas fa-vial" style="color: var(--primary);"></i> STEM Education
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                            <a href="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" target="_blank" class="btn" style="background: var(--primary) !important; color: white !important; font-weight: 700; padding: 16px 30px; border-radius: 18px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);">
+                                <i class="fas fa-file-pdf"></i> เอกสารปฏิบัติการ
+                            </a>
+                            <button onclick="document.getElementById('lab-preview').style.display='block'; this.style.display='none'" class="btn btn-outline" style="padding: 16px 25px; border-radius: 18px; font-weight: 600;">
+                                <i class="fas fa-eye"></i> พรีวิวพรีเซนต์
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="fade-in-right" style="width: 100%; max-width: 500px; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" width="100%" height="450px" style="border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
+                <!-- Interactive Preview -->
+                <div id="lab-preview" style="display: none; margin-top: 40px; animation: fadeIn 0.5s ease;">
+                    <iframe src="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" width="100%" height="500px" style="border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
                 </div>
             </div>
 
