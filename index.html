@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saowanlak Nasa | Physics Educator & Researcher</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Sarabun:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #8b5cf6 !important;      /* Vibrant Purple */
+            --primary-dark: #7c3aed !important;
+            --secondary: #db2777 !important;    /* Pink/Magenta */
+            --accent: #06b6d4 !important;       /* Cyan */
+            --text-dark: #1e293b !important;    /* Dark slate for text */
+            --text-light: #64748b !important;
+            --bg-light: #faf5ff !important;     /* Light purple tint */
+            --white: #ffffff !important;        /* White for cards */
+            --gradient-bg: radial-gradient(circle at center, rgba(139,92,246,0.1) 0%, rgba(255,255,255,0) 100%) !important;
+        }
+        body {
+            background-color: var(--bg-light) !important;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: var(--text-dark) !important;
+        }
+        /* Make hero section transparent */
+        .hero {
+            background: rgba(255, 255, 255, 0.1) !important;
+        }
+        /* Navbar Light Mode */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 15px rgba(37, 99, 235, 0.1) !important;
+        }
+        .navbar a.logo {
+            color: var(--primary) !important;
+        }
+        .nav-links a {
+            color: var(--text-dark) !important;
+        }
+        .section-header h2, .section-header .subtitle {
+            color: var(--text-dark) !important;
+        }
+        /* Cards Light Mode Overrides */
+        .research-showcase, .stat-card {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.5) !important;
+        }
+        .stat-value {
+            color: var(--primary) !important;
+        }
+        .footer {
+            background: #1e293b !important;
+        }
+        .about-card h3,
+        .about-card p,
+        .about-card ul li {
+            color: var(--text-dark) !important;
+        }
+        
+        .about-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+            transition: all 0.4s ease !important;
+            border: 1px solid #e2e8f0 !important;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+        .about-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 20px 40px rgba(255, 20, 147, 0.15) !important;
+        }
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+        .about-card .icon {
+            font-size: 45px !important;
+            background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            filter: drop-shadow(0 4px 6px rgba(255, 20, 147, 0.2));
+            transition: transform 0.4s ease;
+        }
+        .about-card:hover .icon {
+            transform: scale(1.1);
+        }
+        .about-card h3 {
+            font-weight: 700 !important;
+            color: #1e293b !important;
+        }
+        .about-card ul li {
+            position: relative;
+            font-size: 1.05rem;
+            color: #334155;
+            transition: color 0.3s ease;
+        }
+        .about-card ul li:hover {
+            color: #2563eb;
+        }
+        .research-showcase {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.3s ease;
+        }
+        .research-showcase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        .stat-card {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+        .hero-btns .btn {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .hero-btns .btn:hover {
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">S.Nasa<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">ประวัติ</a></li>
+                <li><a href="#research">งานวิจัย</a></li>
+                <li><a href="#methodology">การสอน</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <div class="profile-img-container">
+                <img src="รูปบัณฑิต.jpg" alt="Saowanlak Nasa" class="profile-img">
+            </div>
+            <h1 class="fade-in-up">นางสาวเสาวลักษณ์ นาสา</h1>
+            <h2 class="fade-in-up delay-1">Physics Educator & Researcher</h2>
+            <p class="fade-in-up delay-2">มุ่งมั่นพัฒนาการศึกษาวิทยาศาสตร์ด้วย Active Learning และนวัตกรรม</p>
+            <div class="hero-btns fade-in-up delay-3" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                <a href="#research" class="btn btn-primary"><i class="fas fa-microscope"></i> ดูงานวิจัย</a>
+                <a href="Portforlio แฟ้มสะสมผลงาน.pdf" target="_blank" class="btn btn-outline" style="border-color: #0d6efd; color: #0d6efd; background-color: #e7f1ff;"><i class="fas fa-user-graduate"></i> แฟ้มสะสมผลงาน</a>
+                <a href="แผนการจัดการเรียนรู้ เรื่อง พลังงานแสงอาท.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-book"></i> แผนการสอนพลังงานแสงอาทิตย์</a>
+                <a href="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-flask"></i> การทดลองถุงพลาสติก</a>
+                <a href="รายงานการผลิตพลังงานไฟฟ้าจากโซลาร์เซลล์.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-solar-panel"></i> รายงานโซลาร์เซลล์</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> ติดต่อฉัน</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">About Me</span>
+                <h2>ข้อมูลส่วนตัว</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="รูปบัณฑิต.jpg" alt="Saowanlak Nasa" class="about-profile-img">
+                </div>
+                <div class="about-card fade-in">
+                    <i class="fas fa-user icon"></i>
+                    <h3>ประวัติส่วนตัว</h3>
+                    <p><strong>อายุ:</strong> 22 ปี</p>
+                    <p><strong>สัญชาติ:</strong> ไทย</p>
+                    <p><strong>ศาสนา:</strong> คริสต์</p>
+                </div>
+                <div class="about-card fade-in">
+                    <i class="fas fa-graduation-cap icon"></i>
+                    <h3>การศึกษา</h3>
+                    <p><strong>ปริญญาตรี : สาขาวิชาวิทยาศาสตร์ (เอกฟิสิกส์) ชั้นปีที่ 4</strong></p>
+                    <p>มหาวิทยาลัยราชภัฏอุตรดิตถ์ (มรอ.)</p>
+                </div>
+                <div class="about-card fade-in">
+                    <i class="fas fa-bullseye icon"></i>
+                    <h3>จุดมุ่งหมายในการทำงาน</h3>
+                    <p style="text-align: left; font-size: 0.95rem; line-height: 1.6;">ต้องการสมัครงานใน ตำแหน่ง ครูวิทยาศาสตร์ เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างให้มีประสิทธิภาพ การเกิดผลประโยชน์ต่อนักเรียนด้วย</p>
+                </div>
+                <div class="about-card fade-in delay-1">
+                    <i class="fas fa-school icon"></i>
+                    <h3>ประสบการณ์สอนในสถานศึกษา</h3>
+                    <ul style="text-align: left; padding-left: 20px; font-size: 0.95rem; line-height: 1.6;">
+                        <li>โรงเรียนนาอินวิทยาคม</li>
+                        <li>โรงเรียนชาติการวิทยา</li>
+                        <li>โรงเรียนสาธิตมหาวิทยาลัยราชภัฎอุตรดิตถ์</li>
+                        <li>โรงเรียนเตรียมอุดมศึกษาน้อมเกล้าอุตรดิตถ์</li>
+                    </ul>
+                </div>
+                <div class="about-card fade-in delay-1">
+                    <i class="fas fa-chalkboard-teacher icon"></i>
+                    <h3>ประสบการณ์สอน</h3>
+                    <ul style="text-align: left; padding-left: 20px; font-size: 0.95rem; line-height: 1.6;">
+                        <li>ครูสอนวิชาฟิสิกส์ ม.4-5 ที่ BKO</li>
+                        <li>ครูสอนวิชาวิทยาศาสตร์(เพิ่มเติม) ม.3 ที่ BKO</li>
+                        <li>ติววิชาวิทยาศาสตร์ทั่วไป ป.6 ที่ BKO และ UEC</li>
+                        <li>ครูสอนวิชาเคมี ม. 4 ที่ UEC</li>
+                        <li>ครูสอนวิชาฟิสิกส์ ม.4 ที่ House School</li>
+                        <li>สอน English ประถมต้น ที่ UEC</li>
+                        <li>รับสอนออนไลน์วิชากลศาสตร์ (วิศวะ)</li>
+                    </ul>
+                </div>
+                <div class="about-card fade-in delay-2">
+                    <i class="fas fa-laptop-code icon"></i>
+                    <h3>ทักษะ และความสามารถ</h3>
+                    <ul style="text-align: left; padding-left: 20px; font-size: 0.95rem; line-height: 1.6;">
+                        <li>สอนพิเศษ</li>
+                        <li>การใช้โปรแกรม Excel</li>
+                        <li>การใช้โปรแกรม Word</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Spotlight -->
+    <section class="section research" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Classroom Action Research</span>
+                <h2>งานวิจัยเชิงปฏิบัติการในชั้นเรียน</h2>
+            </div>
+
+            <div class="research-showcase">
+                <div class="research-text fade-in-left">
+                    <h3>การพัฒนารูปแบบการจัดการเรียนรู้เชิงรุก (Active Learning)</h3>
+                    <h4>วิชาฟิสิกส์ โดยใช้ปัญหาเป็นฐาน (Problem-Based Learning)</h4>
+                    <p class="abstract">
+                        การวิจัยนี้มีวัตถุประสงค์เพื่อพัฒนาและทดลองใช้รูปแบบการจัดการเรียนรู้เชิงรุกวิชาฟิสิกส์
+                        โดยใช้ปัญหาเป็นฐาน เพื่อเสริมสร้างทักษะการแก้ปัญหาและผลสัมฤทธิ์ทางการเรียนของนักเรียน
+                        ระดับชั้นมัธยมศึกษาปีที่ 4 โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า อุตรดิตถ์
+                    </p>
+                    <ul class="key-points">
+                        <li><i class="fas fa-check-circle"></i> กลุ่มตัวอย่าง: นักเรียน 38 คน (กลุ่มทดลอง & ควบคุม)</li>
+                        <li><i class="fas fa-check-circle"></i> เครื่องมือ: แผนการจัดการเรียนรู้, แบบวัดทักษะ, แบบทดสอบ
+                        </li>
+                        <li><i class="fas fa-check-circle"></i> สถิติ: t-test แบบ Dependent Samples</li>
+                    </ul>
+                </div>
+                <div class="research-stats fade-in-right">
+                    <div class="stat-card primary">
+                        <span class="stat-value">13.05</span>
+                        <span class="stat-label">คะแนนเฉลี่ยหลังเรียน</span>
+                        <span class="stat-sub">(เพิ่มขึ้นจากก่อนเรียน 8.47)</span>
+                    </div>
+                    <div class="stat-card secondary">
+                        <span class="stat-value">1.24</span>
+                        <span class="stat-label">Effect Size (Cohen's d)</span>
+                        <span class="stat-sub">ขนาดผลใหญ่มาก</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiment Box -->
+            <div class="research-showcase" style="margin-top: 4rem;">
+                <div class="research-text fade-in-left">
+                    <h3>ปฏิบัติการทดลอง</h3>
+                    <h4>เรื่อง การหาค่าความร้อนของถุงพลาสติก</h4>
+                    <p class="abstract">
+                        สื่อการเรียนการสอนและการทดลองเชิงปฏิบัติการ เรื่อง การหาค่าความร้อนของถุงพลาสติก เพื่อศึกษาทฤษฎีทางความร้อน ส่งเสริมการเรียนรู้ผ่านการลงมือปฏิบัติจริง และสามารถนำความรู้ฟิสิกส์ไปประยุกต์ใช้กับสิ่งแวดล้อมได้
+                    </p>
+                    <ul class="key-points">
+                        <li><i class="fas fa-check-circle"></i> เน้นกระบวนการ Active Learning และการทดลอง</li>
+                        <li><i class="fas fa-check-circle"></i> ฝึกทักษะการคิดวิเคราะห์ และการบันทึกผลทางวิทยาศาสตร์</li>
+                    </ul>
+                    <a href="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" target="_blank" class="btn btn-outline" style="margin-top: 20px;">
+                        <i class="fas fa-file-pdf"></i> เปิดเอกสารประกอบการทดลอง
+                    </a>
+                </div>
+                <div class="fade-in-right" style="width: 100%; max-width: 500px; display: flex; align-items: center; justify-content: center;">
+                    <iframe src="ปฏิบัติการทดลอง-เรื่อง-การหาค่าความร้อนของถุงพลาสติก.pdf" width="100%" height="450px" style="border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section methodology" id="methodology">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Methodology</span>
+                <h2>รูปแบบการจัดการเรียนรู้</h2>
+            </div>
+            <div class="method-steps">
+                <div class="step-card fade-in-up">
+                    <div class="step-number">01</div>
+                    <h3>Problem Based</h3>
+                    <p>ใช้สถานการณ์ปัญหาเป็นฐานในการกระตุ้นความสนใจ</p>
+                </div>
+                <div class="step-card fade-in-up delay-1">
+                    <div class="step-number">02</div>
+                    <h3>Active Learning</h3>
+                    <p>ผู้เรียนลงมือปฏิบัติ สร้างองค์ความรู้ด้วยตนเอง</p>
+                </div>
+                <div class="step-card fade-in-up delay-2">
+                    <div class="step-number">03</div>
+                    <h3>Skill Development</h3>
+                    <p>เน้นทักษะการแก้ปัญหา และการคิดวิเคราะห์</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">S.Nasa</div>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 092-5299432</p>
+                    <p><i class="fas fa-envelope"></i> nasasaowanlak@gmail.com</p>
+                    <p><i class="fab fa-line"></i> ID: 0902194837</p>
+                    <p><i class="fab fa-facebook-f"></i> เสาวลักษณ์ นาสา</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 21/5 14bar(ร้านสีเขียว).เจษฎาบดินทร์ ช.14 ต.ท่าอิฐ อ.เมือง 53000 จ.อุตรดิตถ์</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Saowanlak Nasa. All Rights Reserved. Designed with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
