@@ -240,7 +240,7 @@ a {
 }
 
 .hero-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     border-radius: 28px;
     width: 180px;
@@ -251,11 +251,12 @@ a {
     justify-content: center;
     gap: 15px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+    border: 2px solid rgba(236, 72, 153, 0.3);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-decoration: none;
     cursor: pointer;
+    animation: rainbow-flash 5s linear infinite;
 }
 
 .hero-card:hover {
