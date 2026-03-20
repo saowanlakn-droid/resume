@@ -118,30 +118,41 @@ a {
 }
 
 /* Hero Section */
+@keyframes background-move {
+    0% { background-position: 0% 50%; transform: scale(1); }
+    50% { background-position: 100% 50%; transform: scale(1.05); }
+    100% { background-position: 0% 50%; transform: scale(1); }
+}
+
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: var(--gradient-bg);
+    background: url('solar_pan_bg.jpg') center center no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
-#particle-canvas {
+.hero::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: inherit;
+    background-size: 110% 110%;
     z-index: 1;
+    animation: background-move 40s ease-in-out infinite;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .profile-img-container {
