@@ -146,13 +146,45 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
+        .hero-btns {
+            gap: 1.5rem !important;
+        }
         .hero-btns .btn {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 120px;
+            padding: 15px 5px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15) !important;
+            color: var(--text-dark) !important;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            border: 2px solid rgba(245, 158, 11, 0.2) !important;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            gap: 8px;
+            white-space: pre-wrap;
+            line-height: 1.3;
+        }
+        .hero-btns .btn i {
+            font-size: 42px !important;
+            color: var(--primary) !important;
+            margin-right: 0 !important;
+            margin-bottom: 5px;
+            transition: transform 0.3s ease;
         }
         .hero-btns .btn:hover {
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
-            transform: translateY(-4px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.35) !important;
+            background: #ffffff !important;
+            border-color: var(--primary) !important;
+        }
+        .hero-btns .btn:hover i {
+            transform: scale(1.1);
         }
     </style>
 </head>
