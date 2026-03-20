@@ -180,26 +180,41 @@
                 <h2>ข้อมูลส่วนตัว</h2>
             </div>
             <div class="about-grid">
-                <div class="about-image">
-                    <img src="รูปบัณฑิต.jpg" alt="Saowanlak Nasa" class="about-profile-img">
+                <!-- Main Personal Profile Card -->
+                <div class="about-card fade-in" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; padding: 50px; text-align: left; align-items: center; background: rgba(255, 255, 255, 0.95); border-radius: 40px; box-shadow: 0 25px 60px rgba(59, 130, 246, 0.12);">
+                    <div class="profile-visual" style="text-align: center; position: relative;">
+                        <img src="รูปบัณฑิต.jpg" alt="Saowanlak Nasa" style="width: 100%; max-width: 280px; border-radius: 35px; border: 6px solid #fff; box-shadow: 0 15px 45px rgba(0,0,0,0.1); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) rotate(2deg)'" onmouseout="this.style.transform='translateY(0) rotate(0)'">
+                        <div style="margin-top: 20px;">
+                            <span style="background: var(--primary); color: white; padding: 8px 25px; border-radius: 50px; font-weight: 700; font-size: 1rem; box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);">Education Student</span>
+                        </div>
+                    </div>
+                    <div class="profile-info-list" style="position: relative;">
+                        <h3 style="font-size: 2.4rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 5px;">นางสาวเสาวลักษณ์ นาสา</h3>
+                        <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 30px; font-weight: 500;">Physics Education Specialist</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px 40px;">
+                            <div class="info-item">
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-id-card" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>รหัสนักศึกษา:</strong> 65031620108</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-university" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>คณะครุศาสตร์</strong> มรภ.อุตรดิตถ์</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-atom" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>วิชาเอก:</strong> ฟิสิกส์ (ปีที่ 4)</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-birthday-cake" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>วันเกิด:</strong> 04 ธันวาคม 2546</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-cross" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>ศาสนา:</strong> คริสต์</p>
+                            </div>
+                            <div class="info-item">
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-flag" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>สัญชาติ/เชื้อชาติ:</strong> ไทย / ไทย</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-weight" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>น้ำหนัก:</strong> 49 กิโลกรัม</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-arrows-alt-v" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>ส่วนสูง:</strong> 160 เซนติเมตร</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-notes-medical" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>โรคประจำตัว:</strong> ไม่มี</p>
+                                <p style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-bullseye" style="color: var(--primary); margin-right: 12px; width: 20px;"></i><strong>เป้าหมาย:</strong> ครูสอนฟิสิกส์ชั้นนำ</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card fade-in">
-                    <i class="fas fa-user icon"></i>
-                    <h3>ประวัติส่วนตัว</h3>
-                    <p><strong>อายุ:</strong> 22 ปี</p>
-                    <p><strong>สัญชาติ:</strong> ไทย</p>
-                    <p><strong>ศาสนา:</strong> คริสต์</p>
-                </div>
-                <div class="about-card fade-in">
-                    <i class="fas fa-graduation-cap icon"></i>
-                    <h3>การศึกษา</h3>
-                    <p><strong>ปริญญาตรี : สาขาวิชาวิทยาศาสตร์ (เอกฟิสิกส์) ชั้นปีที่ 4</strong></p>
-                    <p>มหาวิทยาลัยราชภัฏอุตรดิตถ์ (มรอ.)</p>
-                </div>
+
                 <div class="about-card fade-in">
                     <i class="fas fa-bullseye icon"></i>
                     <h3>จุดมุ่งหมายในการทำงาน</h3>
-                    <p style="text-align: left; font-size: 0.95rem; line-height: 1.6;">ต้องการสมัครงานใน ตำแหน่ง ครูวิทยาศาสตร์ เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างให้มีประสิทธิภาพ การเกิดผลประโยชน์ต่อนักเรียนด้วย</p>
+                    <p style="text-align: left; font-size: 1rem; line-height: 1.7; color: var(--text-light);">ต้องการสมัครงานในตำแหน่ง "ครูวิทยาศาสตร์" เพื่อเป็นส่วนหนึ่งของสถาบันกวดวิชาในการช่วยส่งเสริมศักยภาพของผู้เรียนอย่างมีประสิทธิภาพสูงสุด และเกิดผลประโยชน์สูงสุดต่อนักเรียนทุกคน</p>
                 </div>
                 <div class="about-card fade-in delay-1">
                     <i class="fas fa-school icon"></i>
