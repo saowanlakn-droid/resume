@@ -373,13 +373,10 @@
                     </div>
 
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                        <a href="แผนการจัดการเรียนรู้ เรื่อง พลังงานแสงอาท.pdf" target="_blank" class="btn" style="background: var(--primary) !important; color: white !important; font-family: 'Prompt', sans-serif; font-weight: 600; padding: 18px 30px; border-radius: 20px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25);">
+                        <a href="แผนการจัดการเรียนรู้ เรื่อง พลังงานแสงอาท.pdf" target="_blank" class="btn" style="background: var(--primary) !important; color: white !important; font-family: 'Prompt', sans-serif; font-weight: 600; padding: 18px 35px; border-radius: 20px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25);">
                             <i class="fas fa-file-pdf"></i> ดาวน์โหลดแผนการสอน
                         </a>
-                        <a href="แบบทดสอบ เรื่อง พลังงานแสงอาทิตย์.pdf" target="_blank" class="btn" style="background: #22c55e !important; color: white !important; font-family: 'Prompt', sans-serif; font-weight: 600; padding: 18px 30px; border-radius: 20px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);">
-                            <i class="fas fa-clipboard-check"></i> ทำแบบทดสอบ
-                        </a>
-                        <button onclick="document.getElementById('solar-preview').style.display = (document.getElementById('solar-preview').style.display === 'none' ? 'block' : 'none'); this.innerHTML = (this.innerHTML.includes('พรีวิว') ? '<i class=\'fas fa-times\'></i> ปิดพรีวิว' : '<i class=\'fas fa-eye\'></i> พรีวิวแผนการสอน')" class="btn btn-outline" style="font-family: 'Prompt', sans-serif; padding: 18px 30px; border-radius: 20px; font-weight: 600;">
+                        <button onclick="document.getElementById('solar-preview').style.display = (document.getElementById('solar-preview').style.display === 'none' ? 'block' : 'none'); this.innerHTML = (this.innerHTML.includes('พรีวิว') ? '<i class=\'fas fa-times\'></i> ปิดพรีวิว' : '<i class=\'fas fa-eye\'></i> พรีวิวแผนการสอน')" class="btn btn-outline" style="font-family: 'Prompt', sans-serif; padding: 18px 35px; border-radius: 20px; font-weight: 600;">
                             <i class="fas fa-eye"></i> พรีวิวแผนการสอน
                         </button>
                     </div>
@@ -387,6 +384,43 @@
                     <div id="solar-preview" style="display: none; margin-top: 40px; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; animation: slideDown 0.4s ease;">
                          <iframe src="แผนการจัดการเรียนรู้ เรื่อง พลังงานแสงอาท.pdf" width="100%" height="600px" style="border: none;"></iframe>
                     </div>
+                </div>
+            </div>
+
+            <!-- Quiz Showcase Spotlight -->
+            <div class="research-showcase fade-in-up" style="margin-top: 5rem; grid-template-columns: 1fr; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 60px; border-radius: 45px; border: 1px dashed rgba(34,197,94,0.3); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -10px; right: 20px; font-size: 8rem; color: rgba(34, 197, 94, 0.05); font-weight: 900; pointer-events: none;">QUIZ</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center;">
+                    <div class="quiz-content" style="text-align: left; position: relative; z-index: 2;">
+                        <span style="font-family: 'Prompt', sans-serif; color: #16a34a; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; font-size: 0.85rem; display: block; margin-bottom: 10px;">Evaluation & Assessment</span>
+                        <h3 style="font-family: 'Prompt', sans-serif; font-size: 2.6rem; color: #166534; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">แบบทดสอบวัดความรู้:<br>เรื่อง พลังงานแสงอาทิตย์</h3>
+                        <p style="font-family: 'Prompt', sans-serif; font-size: 1.15rem; color: #475569; margin-bottom: 30px; line-height: 1.9; font-weight: 400;">
+                            เครื่องมือวัดผลการเรียนรู้ที่ครอบคลุม ทั้งระดับความเข้าใจพื้นฐานและการวิเคราะห์เชิงลึก เพื่อประเมินผลสัมฤทธิ์ทางการเรียนตามวัตถุประสงค์ของแผนการจัดการเรียนรู้และสะท้อนทักษะกระบวนการคิดของนักเรียน
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 35px;">
+                            <div style="background: white; padding: 12px 22px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; font-family: 'Prompt', sans-serif; color: #166534; font-weight: 600;">
+                                <i class="fas fa-check-double"></i> Multiple Choice
+                            </div>
+                            <div style="background: white; padding: 12px 22px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; font-family: 'Prompt', sans-serif; color: #166534; font-weight: 600;">
+                                <i class="fas fa-edit"></i> Critical Thinking
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <a href="แบบทดสอบ เรื่อง พลังงานแสงอาทิตย์.pdf" target="_blank" class="btn" style="background: #22c55e !important; color: white !important; font-family: 'Prompt', sans-serif; font-weight: 700; padding: 18px 40px; border-radius: 20px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 25px rgba(34, 197, 94, 0.25);">
+                                <i class="fas fa-file-invoice"></i> เปิดเล่มแบบทดสอบ (.pdf)
+                            </a>
+                            <button onclick="document.getElementById('quiz-preview').style.display = (document.getElementById('quiz-preview').style.display === 'none' ? 'block' : 'none'); this.innerHTML = (this.innerHTML.includes('พรีวิว') ? '<i class=\'fas fa-times\'></i> ปิดพรีวิว' : '<i class=\'fas fa-eye\'></i> พรีวิวแบบทดสอบ')" class="btn btn-outline" style="font-family: 'Prompt', sans-serif; padding: 18px 30px; border-radius: 20px; font-weight: 600; border-color: #22c55e; color: #166534;">
+                                <i class="fas fa-eye"></i> พรีวิวแบบทดสอบ
+                            </button>
+                        </div>
+                    </div>
+                    <div class="quiz-visual" style="border-radius: 35px; overflow: hidden; box-shadow: 0 30px 60px rgba(22,101,52,0.12); border: 2px solid white; transition: all 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="quiz_hero.png" alt="Quiz Showcase" style="width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
+                <!-- Interactive Preview -->
+                <div id="quiz-preview" style="display: none; margin-top: 45px; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 45px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; animation: slideDown 0.4s ease;">
+                     <iframe src="แบบทดสอบ เรื่อง พลังงานแสงอาทิตย์.pdf" width="100%" height="600px" style="border: none;"></iframe>
                 </div>
             </div>
 
